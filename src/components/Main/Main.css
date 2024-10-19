@@ -1,0 +1,362 @@
+/*position: absolute: Positions the element relative to its closest positioned ancestor. The bottom (along with top, left, and right) properties are used to control its exact position within that ancestor.
+position: relative: Moves the element relative to its original position but still occupies space in the document flow. The bottom property can shift the element from its original position, but it's relative to its normal position, not the container's edges.
+position: static: The default positioning. The bottom property has no effect in this context. */
+
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background-color: #fff; 
+    color: #333; 
+    
+}
+
+
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 20px;
+    color: #585858; 
+}
+.main.dark .nav{
+    color: rgba(255, 255, 255, 0.933)
+}
+
+
+
+.main .nav img {
+    border-radius: 50%;
+    max-width: 30px;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.main .greet {
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px 60px;
+}
+
+
+
+.main .greet p {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+.main.dark .card img{
+    background-color: #333;
+}
+
+
+.main .card p {
+    color: #585858;
+    font-size: 17px;
+}
+
+
+.main .card:hover {
+    background-color: #dfe4ea;
+}
+
+
+
+.main .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 20px 30px;
+    border-radius: 50px;
+}
+
+.search-box.dark {
+    background-color: #444; 
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #333; 
+}
+
+.main.dark .search-box input {
+    color: rgb(244, 243, 243); 
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 8px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.main.dark .bottom-info {
+    color: #ccc; 
+}
+
+.main .bottom-info-f {
+    font-size: 18px;
+    margin: 15px 30px;
+    text-align: center;
+    font-weight: 300;
+    background-color: hwb(210 98% 0%);
+    border-radius: 10px;
+    font-family: "Google Sans";
+}
+
+.black {
+    color: black;
+}
+.b-black {
+    color: #ccc;
+}
+
+
+.meimg {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+.main.dark .loader hr{
+
+   background-color: #000000;
+   background: linear-gradient(to right, #9ed7ff, #111111, #9ed7ff);
+   animation: loader 3s infinite linear;
+
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px;
+    }
+
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Main.css */
+.main.dark {
+    background-color: #000000eb;
+    color: #fff;
+}
+
+.main.dark .greet p span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.main.dark .greet p{
+    color: rgb(75, 75, 75);
+}
+
+.main.dark .card {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+.main.dark .card:hover{
+    background-color: #333333;
+    color: #fff;
+}
+.main.dark .card p {
+    color: #ffffffd5;
+}
+
+.main.dark .search-box {
+    background-color: #1c1c1c;
+}
+
+
+
+
+.main.dark .bottom-info-f {
+    color: #cadcef;
+    background-color: rgba(128, 128, 128, 0.092);
+}
+
+.main.dark .black{
+    color: #cadcef;
+    background-color: rgba(128, 128, 128, 0.092);
+
+
+}
+
+
+/* Responsive styling for screens less than 600px wide (phones) */
+
+@media(max-width: 480px) {
+    .main .greet {
+        font-size: 32px;
+        padding: 10px 20px;
+    }
+
+    .main-container {
+        padding: 0 15px;
+    }
+
+    .main .cards {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .main .cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main .card {
+        flex: 0 0 60%;
+        height: 180px;
+        padding: 10px;
+        scroll-snap-align: start;
+    }
+
+    .main .card img {
+        width: 30px;
+    }
+
+    .main-bottom input {
+        flex: none;
+        width: 150px;
+    }
+
+    .main .bottom {
+        margin-bottom: 30px;
+    }
+
+    .main-bottom img {
+        width: 20px;
+    }
+
+    .search-box {
+        padding: 5px 10px;
+    }
+
+    .search-box div {
+        gap: 5px;
+    }
+
+    .main .bottom-info {
+        font-size: 11px;
+    }
+
+    .main .bottom-info-f {
+        font-size: 15px;
+    }
+}
