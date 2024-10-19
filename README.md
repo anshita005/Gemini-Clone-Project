@@ -14,12 +14,16 @@ A fully responsive cryptocurrency dashboard inspired by Gemini, built with React
 
 
 🛠️ Tech Stack
+
 Frontend: React.js, JavaScript, Bootstrap, Font-Awesome
+
 Backend: Node.js (optional)
+
 Database: MongoDB
 
 
 🏗️ How to Run
+
 Clone the repository:
 
 bash
